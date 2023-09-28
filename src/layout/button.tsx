@@ -1,98 +1,64 @@
 import * as React from 'react';
+import {useState} from 'react'
+import Box from '@mui/material/Box';
+import Popper, { PopperPlacementType } from '@mui/material/Popper';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
-import Grow from '@mui/material/Grow';
+import Fade from '@mui/material/Fade';
 import Paper from '@mui/material/Paper';
-import Popper from '@mui/material/Popper';
-import MenuItem from '@mui/material/MenuItem';
-import MenuList from '@mui/material/MenuList';
-import Stack from '@mui/material/Stack';
 import styles from './button.module.scss';
 
 export default function MenuListComposition() {
-  const myButtons = ["ACCEUIL", "SERVICES", "CONTACT"];
-  const [open, setOpen] = React.useState(false);
-  const anchorRef = React.useRef<HTMLButtonElement>(null);
-  const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
-  };
-  
-  const handleClose = (event: Event | React.SyntheticEvent) => {
-    if (
-      anchorRef.current &&
-      anchorRef.current.contains(event.target as HTMLElement)
-      ) {
-        return;
-      }
-      
-      setOpen(false);
-  };
-  
-  function handleListKeyDown(event: React.KeyboardEvent) {
-    if (event.key === 'Tab') {
-      event.preventDefault();
-      setOpen(false);
-    } else if (event.key === 'Escape') {
-      setOpen(false);
-    }
-  }
-  
-  const prevOpen = React.useRef(open);
-  React.useEffect(() => {
-    if (prevOpen.current === true && open === false) {
-      anchorRef.current!.focus();
-    }
-    
-    prevOpen.current = open;
-  }, [open]);
+  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
+  const [open, setOpen] = useState(false);
+  const [placement, setPlacement] = useState<PopperPlacementType>();
+  const myButtons = [
+  ["ACCEUIL", "EQUIPE", "CLINIQUE", "JOINDRE"], 
+  ["SERVICES", "chir", "medecine", "imagerie"], 
+  ["CONTACT"], 
+  ["NOS CONSEILS", "VACCINS", "STERILISATION", "MODE DE VIE", "LUTTE ANTIPARASITAIRE", "QUAND CONSULTER"], 
+  ["BOUTIQUE EN LIGNE"]];
+  const [button_index, setbutton_index] = useState(0)
 
-  return (
-    <Stack direction="row" spacing={2}>
-      <div>
-        <div className={styles.headers}>{myButtons.map((myButtons, index) => 
-          <Button key={index}
-          ref={anchorRef}
-          id="composition-button"
-          aria-controls={open ? 'composition-menu' : undefined}
-          aria-expanded={open ? 'true' : undefined}
-          aria-haspopup="true"
-          onClick={handleToggle}
-          >{myButtons}
-          </Button>)}</div>
-        <Popper
-          open={open}
-          anchorEl={anchorRef.current}
-          role={undefined}
-          placement="bottom-start"
-          transition
-          disablePortal
-        >
-          {({ TransitionProps, placement }) => (
-            <Grow
-              {...TransitionProps}
-              style={{
-                transformOrigin:
-                  placement === 'bottom-start' ? 'left top' : 'left bottom',
-              }}
-            >
-              <Paper>
-                <ClickAwayListener onClickAway={handleClose}>
-                  <MenuList
-                    autoFocusItem={open}
-                    id="composition-menu"
-                    aria-labelledby="composition-button"
-                    onKeyDown={handleListKeyDown}
-                  >
-                    <MenuItem onClick={handleClose}>ACCEUIL</MenuItem>
-                    <MenuItem onClick={handleClose}>EQUIPE</MenuItem>
-                    <MenuItem onClick={handleClose}>CLINIQUE</MenuItem>
-                  </MenuList>
-                </ClickAwayListener>
-              </Paper>
-            </Grow>
-          )}
-        </Popper>
-      </div>
-    </Stack>
+  const push_button_index = (nb: number) => {
+      setbutton_index(button_index => nb)
+  }
+
+  const handleClick =
+    (newPlacement: PopperPlacementType) =>
+    (event: React.MouseEvent<HTMLButtonElement>) => {
+      setAnchorEl(event.currentTarget);
+      push_button_index(parseInt(event.currentTarget.id))
+      setOpen((prev) => placement !== newPlacement || !prev);
+      setPlacement(newPlacement);
+    };
+    return (
+      <Box sx={{ width: 500 }}>
+      <Popper open={open} anchorEl={anchorEl} placement={placement} transition>
+        {({ TransitionProps }) => (
+          <Fade {...TransitionProps} timeout={350}>
+            <Paper>
+              <div className={styles.button}>
+              {myButtons[button_index].map((newButton, index) =>
+              <Typography sx={{ p: 2 }}>{newButton}</Typography>
+              )}
+              </div>
+            </Paper>
+          </Fade>
+        )}
+      </Popper>
+      <Grid container justifyContent="center">
+        <Grid item>
+          <div className={styles.headers}>
+          <Button id="0" onClick={handleClick('top-start')}>ACCEUIL</Button>
+          <Button id="1" onClick={handleClick('top-start')}>SERVICES</Button>
+          <Button id="2" onClick={handleClick('top-start')}>CONTACT</Button>
+          <Button id="3" onClick={handleClick('top-start')}>NOS CONSEILS</Button>
+          <Button id="4" onClick={handleClick('top-start')}>BOUTIQUE EN LIGNE</Button>
+          </div>
+        </Grid>
+      </Grid>
+    </Box>
   );
 }
