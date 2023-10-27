@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Fade from '@mui/material/Fade';
 import Paper from '@mui/material/Paper';
 import styles from './button.module.scss';
+import { Link } from 'react-router-dom';
 
 export default function MenuListComposition() {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -14,7 +15,7 @@ export default function MenuListComposition() {
   const [placement, setPlacement] = useState<PopperPlacementType>();
   const myButtons = [
   {id:0, slots:[{text:"EQUIPE", link:"Acceuil"}, {text: "CLINIQUE", link: "Acceuil"}, {text:"JOINDRE", link: "Acceuil"}, {text:"tarif", link:"Acceuil"}, {text:"CGF", link:"Acceuil"}]}, 
-  {id:1, slots:[{text:"CHIRURGIE", link:"../src/pages/chirurgie.tsx"}, {text:"MEDECINE", link:"medecine.tsx"}, {text:"IMAGERIE", link:"imagerie.tsx"}, {text:"DEPOT MINUTE", link:"depot.tsx"}, {text:"E-BOUTIQUE", link:"e-boutique.tsx"}, {text:"URGENCE", link:"urgence.tsx"}]}, 
+  {id:1, slots:[{text:"CHIRURGIE", link:"chirurgie"}, {text:"MEDECINE", link:"medecine.tsx"}, {text:"IMAGERIE", link:"imagerie.tsx"}, {text:"DEPOT MINUTE", link:"depot.tsx"}, {text:"E-BOUTIQUE", link:"e-boutique.tsx"}, {text:"URGENCE", link:"urgence.tsx"}]}, 
   {id:2, slots:[{text:"VACCINS", link:"vaccins.tsx"}, {text:"STERILISATION", link:"steril.tsx"}, {text:"MODE DE VIE", link:"mode_de_vie.tsx"}, {text:"LUTTE ANTIPARASITAIRE", link:"parasites.tsx"}, {text:"QUAND CONSULTER", link:"consult.tsx"}]}, 
   {id:3, slots:[{text:"CONTACT", link:"contact.tsx"}]}]
   const [button_index, setbutton_index] = useState(0)
@@ -39,7 +40,7 @@ export default function MenuListComposition() {
             <Paper>
               <div>
               {myButtons[button_index].slots.map((newButton) =>
-              <a href={newButton.link} className={styles.drop_down}>{newButton.text}</a>
+              <Link to={newButton.link} className={styles.drop_down}>{newButton.text}</Link>
               )}
               </div>
             </Paper>
