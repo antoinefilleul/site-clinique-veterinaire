@@ -50,11 +50,11 @@ export default function MenuListComposition() {
       <Grid container justifyContent="center">
         <Grid item>
           <div className={styles.menu}>
-          <Button id="0" onClick={handleClick('top-start')}>ACCEUIL</Button>
-          <Button id="1" onClick={handleClick('top-start')}>SERVICES</Button>
-          <Button id="2" onClick={handleClick('top-start')}>NOS CONSEILS</Button>
-          <Button id="3" onClick={handleClick('top-start')}>CONTACT</Button>
-          <Button id="4" onClick={handleClick('top-start')}>BOUTIQUE EN LIGNE</Button>
+          <Button id="0" className={styles.boutton} onClick={handleClick('top-start')}>ACCEUIL</Button>
+          <Button id="1" className={styles.boutton} onClick={handleClick('top-start')}>SERVICES</Button>
+          <Button id="2" className={styles.boutton} onClick={handleClick('top-start')}>NOS CONSEILS</Button>
+          <Button id="3" className={styles.boutton} onClick={handleClick('top-start')}>CONTACT</Button>
+          <Button id="4" className={styles.boutton} onClick={handleClick('top-start')}>BOUTIQUE EN LIGNE</Button>
           </div>
         </Grid>
       </Grid>
