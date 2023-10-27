@@ -1,9 +1,8 @@
 import "../index.css";
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
-import styles from './contact.module.scss'
-import { Icon, divIcon, point } from "leaflet";
+import { divIcon, point } from "leaflet";
 
 // custom cluster icon
 const createClusterCustomIcon = function (cluster: { getChildCount: () => any; }) {
