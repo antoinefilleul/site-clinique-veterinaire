@@ -14,7 +14,7 @@ const createClusterCustomIcon = function (cluster: { getChildCount: () => any; }
   });
 };
 
-export default function App() {
+export default function Contact() {
   return (
     <div>
         <h1>CONTACT</h1>

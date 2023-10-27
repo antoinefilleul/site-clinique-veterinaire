@@ -7,16 +7,17 @@ import Button from '@mui/material/Button';
 import Fade from '@mui/material/Fade';
 import Paper from '@mui/material/Paper';
 import styles from './button.module.scss';
+import { Link } from 'react-router-dom'
 
 export default function MenuListComposition() {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [open, setOpen] = useState(false);
   const [placement, setPlacement] = useState<PopperPlacementType>();
   const myButtons = [
-  {id:0, slots:[{text:"EQUIPE", link:"Acceuil"}, {text: "CLINIQUE", link: "Acceuil"}, {text:"JOINDRE", link: "Acceuil"}, {text:"tarif", link:"Acceuil"}, {text:"CGF", link:"Acceuil"}]}, 
-  {id:1, slots:[{text:"CHIRURGIE", link:"../src/pages/chirurgie.tsx"}, {text:"MEDECINE", link:"medecine.tsx"}, {text:"IMAGERIE", link:"imagerie.tsx"}, {text:"DEPOT MINUTE", link:"depot.tsx"}, {text:"E-BOUTIQUE", link:"e-boutique.tsx"}, {text:"URGENCE", link:"urgence.tsx"}]}, 
-  {id:2, slots:[{text:"VACCINS", link:"vaccins.tsx"}, {text:"STERILISATION", link:"steril.tsx"}, {text:"MODE DE VIE", link:"mode_de_vie.tsx"}, {text:"LUTTE ANTIPARASITAIRE", link:"parasites.tsx"}, {text:"QUAND CONSULTER", link:"consult.tsx"}]}, 
-  {id:3, slots:[{text:"CONTACT", link:"contact.tsx"}]}]
+  {id:0, slots:[{text:"EQUIPE", link:"/#equipe"}, {text: "CLINIQUE", link: "/#clinique"}, {text:"JOINDRE", link: "/joindre"}, {text:"tarif", link:"/#tarif"}, {text:"CGF", link:"/#CGF"}]}, 
+  {id:1, slots:[{text:"CHIRURGIE", link:"Chirurgie"}, {text:"MEDECINE", link:"Medecine"}, {text:"IMAGERIE", link:"Imagerie"}, {text:"DEPOT MINUTE", link:"Depot"}, {text:"E-BOUTIQUE", link:"E-boutique"}, {text:"URGENCE", link:"Urgence"}]}, 
+  {id:2, slots:[{text:"VACCINS", link:"Vaccins"}, {text:"STERILISATION", link:"Sterilisation"}, {text:"MODE DE VIE", link:"Mode_de_vie"}, {text:"LUTTE ANTIPARASITAIRE", link:"Lutte antiparasitaire"}, {text:"QUAND CONSULTER", link:"Consult"}]}, 
+  {id:3, slots:[{text:"CONTACT", link:"Contact"}]}]
   const [button_index, setbutton_index] = useState(0)
 
   const push_button_index = (nb: number) => {
@@ -39,7 +40,7 @@ export default function MenuListComposition() {
             <Paper>
               <div>
               {myButtons[button_index].slots.map((newButton) =>
-              <a href={newButton.link} className={styles.drop_down}>{newButton.text}</a>
+              <Link to={newButton.link} className={styles.drop_down} key={newButton.text}>{newButton.text}</Link>
               )}
               </div>
             </Paper>
@@ -49,11 +50,11 @@ export default function MenuListComposition() {
       <Grid container justifyContent="center">
         <Grid item>
           <div className={styles.menu}>
-          <Button id="0" onClick={handleClick('top-start')}>ACCEUIL</Button>
-          <Button id="1" onClick={handleClick('top-start')}>SERVICES</Button>
-          <Button id="2" onClick={handleClick('top-start')}>NOS CONSEILS</Button>
-          <Button id="3" onClick={handleClick('top-start')}>CONTACT</Button>
-          <Button id="4" onClick={handleClick('top-start')}>BOUTIQUE EN LIGNE</Button>
+          <Button id="0" sx={{color: "white"}}onClick={handleClick('top-start')}>ACCEUIL</Button>
+          <Button id="1" sx={{color: "white"}}onClick={handleClick('top-start')}>SERVICES</Button>
+          <Button id="2" sx={{color: "white"}}onClick={handleClick('top-start')}>NOS CONSEILS</Button>
+          <Button id="3" sx={{color: "white"}}onClick={handleClick('top-start')}>CONTACT</Button>
+          <Button id="4" sx={{color: "white"}}onClick={handleClick('top-start')}>BOUTIQUE EN LIGNE</Button>
           </div>
         </Grid>
       </Grid>

@@ -1,10 +1,8 @@
 import * as React from 'react';
-import MenuListComposition from '../layout/button.tsx'
 import styles from "chirurgie.module.scss"
 export default function Chirurgie() {
     return (
         <div>
-            <MenuListComposition/>
             <h1>CHIRURGIE</h1>
             <h2>Nous pratiquons la plupart des interventions chirurgicales des tissus mous</h2>
             <h3> stérilisations des chats, chiens et nouveaux animaux de compagnie,</h3>
