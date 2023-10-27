@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styles from './acceuil.module.scss'
 import MenuListComposition from '../layout/button';
 export default function Acceuil() {
