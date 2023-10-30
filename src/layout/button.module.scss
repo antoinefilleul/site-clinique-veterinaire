@@ -1,6 +1,10 @@
+* {
+    box-sizing: border-box;
+}
 .menu {
-    margin-left: 50vh;
-    min-width: 60%;
+    justify-content: center;
+    margin-left: 35vmax;
+    min-width: 60vh;
     display: flex;
     text-align: center;
     text-decoration: underline;
@@ -8,13 +12,10 @@
 }
 
 .drop_down {
+    padding: 1vh;
     color: white;
     background-color: #364945;
     display: flex;
     text-decoration: none;
     justify-content: center;
-}
-
-.boutton {
-    color: red!important
 }

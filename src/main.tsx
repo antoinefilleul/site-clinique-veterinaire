@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Acceuil from './pages/acceuil.tsx'
+import Accueil from './pages/accueil.tsx'
 import Chirurgie from './pages/chirurgie.tsx';
 import Medecine from './pages/medecine.tsx';
 import Vaccins from './pages/vaccins.tsx';
@@ -23,7 +23,7 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Acceuil/>,
+    element: <Accueil/>,
     errorElement: <ErrorPage/>,
   },
   {

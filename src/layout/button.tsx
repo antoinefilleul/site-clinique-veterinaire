@@ -14,7 +14,7 @@ export default function MenuListComposition() {
   const [open, setOpen] = useState(false);
   const [placement, setPlacement] = useState<PopperPlacementType>();
   const myButtons = [
-  {id:0, slots:[{text:"EQUIPE", link:"/#equipe"}, {text: "CLINIQUE", link: "/#clinique"}, {text:"JOINDRE", link: "/joindre"}, {text:"tarif", link:"/#tarif"}, {text:"CGF", link:"/#CGF"}]}, 
+  {id:0, slots:[{text:"EQUIPE", link:"/#equipe"}, {text: "CLINIQUE", link: "/#clinique"}, {text:"JOINDRE", link: "/#joindre"}, {text:"tarif", link:"/#tarif"}, {text:"CGF", link:"/#CGF"}]}, 
   {id:1, slots:[{text:"CHIRURGIE", link:"Chirurgie"}, {text:"MEDECINE", link:"Medecine"}, {text:"IMAGERIE", link:"Imagerie"}, {text:"DEPOT MINUTE", link:"Depot"}, {text:"E-BOUTIQUE", link:"E-boutique"}, {text:"URGENCE", link:"Urgence"}]}, 
   {id:2, slots:[{text:"VACCINS", link:"Vaccins"}, {text:"STERILISATION", link:"Sterilisation"}, {text:"MODE DE VIE", link:"Mode_de_vie"}, {text:"LUTTE ANTIPARASITAIRE", link:"Lutte antiparasitaire"}, {text:"QUAND CONSULTER", link:"Consult"}]}, 
   {id:3, slots:[{text:"CONTACT", link:"Contact"}]}]
@@ -47,10 +47,10 @@ export default function MenuListComposition() {
           </Fade>
         )}
       </Popper>
-      <Grid container justifyContent="center">
+      <Grid>
         <Grid item>
           <div className={styles.menu}>
-          <Button id="0" sx={{color: "white"}}onClick={handleClick('top-start')}>ACCEUIL</Button>
+          <Button id="0" sx={{color: "white"}}onClick={handleClick('top-start')}>ACCUEIL</Button>
           <Button id="1" sx={{color: "white"}}onClick={handleClick('top-start')}>SERVICES</Button>
           <Button id="2" sx={{color: "white"}}onClick={handleClick('top-start')}>NOS CONSEILS</Button>
           <Button id="3" sx={{color: "white"}}onClick={handleClick('top-start')}>CONTACT</Button>
