@@ -5,14 +5,11 @@
   }
     
   .urgence h2 {
-    padding-top: 10vh;
-    border-bottom: 2px solid #364945;
     margin-right: 30vh;
     margin-left: 30vh;
   }
   
   .urgence header {
-    color:white;
     min-height: 100vh;
     min-width: 100vh;
     background: url(./src/assets/image.jpg) center/cover,no-repeat;
@@ -37,7 +34,9 @@
     border-right: 0px solid TRANSPARENT;
   }
   
-  .urgence .content {
-    margin-top: -90vmax;
-    margin-bottom: 2vmax;
-  }
+.content {
+  margin-top: 10%;
+  border-radius: 2rem;
+  background-color: beige;
+  margin-bottom: 2vmax;
+}

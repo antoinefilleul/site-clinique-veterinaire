@@ -1,0 +1,43 @@
+.boutique h1 {
+    font-size: 300%;
+    padding-top: 10px;
+    color: white;
+    text-align: center;
+}
+
+.boutique img {
+  margin-left: 35vmax;
+  height: 20vh;
+  width: 20vh;
+}
+
+.content {
+    margin-top: 10%;
+    border-radius: 2rem;
+    background-color: beige;
+}
+
+.boutique h2 {
+    margin-left: 30vh;
+    margin-right: 30vh;
+    max-width: 50%;
+}
+
+.lien {
+    font-size: 1.5em;
+    margin-left: 30vh;
+    margin-right: 30vh;
+    margin-bottom: 3vh;
+    max-width: 50%;
+}
+
+.boutique header {
+    min-height: 100vh;
+    min-width: 100vh;
+    background: url(./src/assets/image.jpg) center/cover,no-repeat;
+}
+.boutique img {
+    margin-left: 35vmax;
+    height: 20vh;
+    width: 20vh;
+}
