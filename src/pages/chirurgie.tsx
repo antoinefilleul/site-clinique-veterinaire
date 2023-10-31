@@ -22,7 +22,7 @@ export default function Chirurgie() {
             <div className={styles.visite}>
                 <h3> Nous vous recevons systématiquement avant chaque chirurgie afin de nous assurer de l'état de santé de votre compagnon. (examen clinique , analyse sanguines éventuelles ...) Cette visite permet également de vous expliquer les motifs de l'intervention, son déroulement et les éventuels soins qui en découlent.</h3>
                 <h3>Un devis sera établi.</h3>
-                <h3>La plupart de nos chirurgie sont effectuées sous anesthésie générale. Nous pouvons pratiquer toutes sortes d’anesthésie : de la sédation plus ou moins profonde, quand le geste peut être un peu douloureux ou que l’animal ne doit pas bouger, à l’anesthésie générale avec un respirateur artificiel en passant par des anesthésies « flash » de quelques minutes. Le choix se fait en fonction du geste technique à pratiquer, de l’état géénral de l’animal. Nous attachons également une attention toute particulière à la gestion de la douleur des animaux qui nous sont confiés.</h3>
+                <h3>La plupart de nos chirurgie sont effectuées sous anesthésie générale. Nous pouvons pratiquer toutes sortes d’anesthésie : de la sédation plus ou moins profonde, quand le geste peut être un peu douloureux ou que l’animal ne doit pas bouger, à l’anesthésie générale avec un respirateur artificiel en passant par des anesthésies « flash » de quelques minutes. Le choix se fait en fonction du geste technique à pratiquer, de l’état général de l’animal. Nous attachons également une attention toute particulière à la gestion de la douleur des animaux qui nous sont confiés.</h3>
             </div>
             </div>
         </div>

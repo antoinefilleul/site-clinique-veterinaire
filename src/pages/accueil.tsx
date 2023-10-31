@@ -33,15 +33,15 @@ export default function Accueil() {
       <div className={styles.equipe}>
         <h2 id = "equipe">Equipe</h2>
         <h3>DR Dominique VENEQUE</h3>
-        <h4>diplomée de l'Ecole Nationale Vétérinaire de Maison Alfort en 1981.</h4>
+        <h4>diplomée de l'Ecole Nationale Vétérinaire de Maisons Alfort en 1991.</h4>
         <div className={styles.triangle}></div>
       </div>
       <div className={styles.content}>
         <h2>Nous Joindre</h2>
-        <h3>adresse :1521 Avenue de Bordeaux 3317 ST Jean d'Illac</h3>
-        <h3>tel :0982794727</h3>
+        <h3>adresse : 1521 Avenue de Bordeaux 3317 ST Jean d'Illac</h3>
+        <h3>tel :+33 05 33 09 08 00</h3>
         <h3>vetsurjalles@gmail.com</h3>
-        <a href="https://www.pilepoils.vet/veterinaires/saint-jean-dillac/506939-1/vet-sur-jalles">prise de rendez-vous en ligne</a>
+        <a className={styles.lien} href="https://www.pilepoils.vet/veterinaires/saint-jean-dillac/506939-1/vet-sur-jalles">prise de rendez-vous en ligne</a>
         <div className={styles.tarif}>
           <h2 id = "tarif">Tarifs</h2>
           <div className={styles.flexbox}>
