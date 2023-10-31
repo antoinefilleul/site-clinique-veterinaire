@@ -1,8 +1,16 @@
+import MenuListComposition from "../layout/button"
+import styles from "./vaccins.module.scss"
 
 export default function Vaccins() {
     return (
-        <div>
-            <h1>VACCINS</h1>
+        <div className={styles.vaccin}>
+            <header>
+                <MenuListComposition/>
+                <img src="./src/assets/logo.jpg" alt="logo" />
+                <h1>VACCINS</h1>
+            </header>
+            <div className={styles.trapeze}></div>
+            <div className={styles.content}>
             <h2>LA VACCINATION DU CHAT</h2>
             <h3>La vaccination sert à protéger votre chat de maladies graves qui peuvent laisser des séquelles, voire qui peuvent être mortelles. Les maladies pour lesquelles on vaccine les chats sont les suivantes:</h3>
             <h3>1/ Maladies pour lesquelles on vaccine couramment, dont les vaccins sont vraiment utiles à la santé de votre chat dans notre région. Les protocoles vaccinaux ont évolué ces dernières années pour mieux protéger les animaux en évitant de sur-vacciner. Aujourd’hui, les protocoles reconnus sont de commencer à vacciner dès l’âge de deux mois, puis de faire une deuxième injection à trois mois. Comme les anticorps maternels interagissent avec la réaction immunitaire des vaccins, on conseille une dernière injection de ce protocole de primo-vaccination à 4 mois. Puis en fonction des vaccins, il faudra refaire des rappels tous les ans ou tous les deux ans, voire tous les trois ans.</h3>
@@ -24,6 +32,7 @@ export default function Vaccins() {
             <h3>3/ Autres vaccinations</h3>
             <h3>- La Piroplasmose et la Maladie de Lyme : ce sont des maladies transmises par piqûres de tiques, qui sont graves ( les animaux peuvent avoir des séquelles) voire mortelles. Grace à l’amélioration des traitements anti tiques, ce sont des maladies que l’on voit peu maintenant. Si vous désirez vacciner vos chiens contre ces maladies, merci de nous le dire lors de la prise de rendez-vous, nous commanderons le vaccin pour vous.</h3>
             <h3>- La Leishmaniose : maladie transmise par les phlébotomes ( moustiques) qui sévit fortement dans le sud-est de la France, mais qui n’est pas encore présente dans notre région. Si vous prévoyez d’y amener votre chien en période d’activité des moustiques, signalez le nous, nous pourrons prévoir un protocole vaccinal adapté.</h3>
+            </div>
         </div>
     )
 }

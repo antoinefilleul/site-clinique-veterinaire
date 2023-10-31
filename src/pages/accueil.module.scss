@@ -1,16 +1,15 @@
 @font-face {
-  // font-display: auto;
   font-family: palatino;
   src: url(../assets/Palatino.woff2);
 }
 
 * {
   box-sizing: border-box;
-  margin: 0;
   font-family: palatino;
 }
 
 .accueil h1 {
+  font-size: 300%;
   padding-top: 10px;
   color: white;
   text-align: center;
@@ -31,13 +30,13 @@
   margin-left: 5vh;
 }
 
-header {
+.accueil header {
   min-height: 100vh;
   min-width: 100vh;
   background: url(./src/assets/image.jpg) center/cover,no-repeat;
 }
 
-img {
+.accueil img {
   margin-left: 35vmax;
   height: 20vh;
   width: 20vh;

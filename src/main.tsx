@@ -32,7 +32,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
   },
   {
-    path: 'Mode de vie',
+    path: 'Mode_de_vie',
     errorElement: <ErrorPage/>,
     element: <Mode_de_vie/>
   },
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
     element: <Contact/>
   },
   {
-    path: 'Lutte anti parasitaire',
+    path: 'Lutte antiparasitaire',
     errorElement: <ErrorPage/>,
     element: <Lutte_parasitaire/>
   },

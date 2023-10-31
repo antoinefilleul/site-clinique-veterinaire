@@ -41,6 +41,7 @@ export default function Accueil() {
         <h3>adresse :1521 Avenue de Bordeaux 3317 ST Jean d'Illac</h3>
         <h3>tel :0982794727</h3>
         <h3>vetsurjalles@gmail.com</h3>
+        <a href="https://www.pilepoils.vet/veterinaires/saint-jean-dillac/506939-1/vet-sur-jalles">prise de rendez-vous en ligne</a>
         <div className={styles.tarif}>
           <h2 id = "tarif">Tarifs</h2>
           <div className={styles.flexbox}>
@@ -48,7 +49,7 @@ export default function Accueil() {
           </div>
         </div>
         <div className={styles.CGF}>
-        <h2 id = "CGF">Condition Générale de Fonctionnement</h2>
+        <h2 id = "CGF">Conditions Générales de Fonctionnement</h2>
         <h3>Les présentes conditions sont consultables à l’accueil de notre clinique ainsi que sur le site internet de la clinique. Tout acte effectué sur un patient dans notre établissement est soumis aux conditions générales de fonctionnement que le propriétaire ou détenteur de l’animal déclare accepter sans conditions.</h3>
         <h3>Notre établissement de soins est classé « clinique vétérinaire pour animaux de compagnie » conformément à l’arrêté du 15 mars 2015 relatifs aux établissements de soins vétérinaires et du cahier des charges publié sur le site internet de l’ordre des vétérinaires www.veterinaire.fr. La clinique est située au 1521 avenue de Bordeaux à saint Jean d’Illac, vous pouvez nous joindre par téléphone au 0533090800 ou par mail à l’adresse vetsurjalles@gmail.com</h3>
         <h3>La clinique est ouverte au public du lundi au vendredi de 8h30 à 12h30 et de 14h à 18h30. Les consultations ont lieu uniquement sur rendez-vous sauf cas d’urgence. Pour la sécurité de tous, les chiens doivent être tenus en laisse et les chats doivent être dans des cages de transport. Un docteur vétérinaire est présent dans la clinique pendant les heures d’ouverture, sauf cas de force majeure.</h3>

@@ -1,36 +1,23 @@
-
-.chirurgie h1 {
+.parasites h1 {
   font-size: 300%;
   color: white;
   text-align: center;
 }
-
-.chirurgie h2 {
-    padding-top: 10vh;
-    border-bottom: 2px solid #364945;
-    margin-right: 30vh;
-    margin-left: 30vh;
-    margin-top: 10vh;
+  
+.parasites h2 {
+  padding-top: 10vh;
+  border-bottom: 2px solid #364945;
+  margin-right: 30vh;
+  margin-left: 30vh;
 }
 
-.chirurgie h3 {
-  margin-left: 10vh;
-  margin-top: 2vh;
-  padding-right: 10vh;
-}
-
-.chirurgie h4 {
-  margin-top: 5vh;
-  margin-left: 5vh;
-}
-
-.chirurgie header {
+.parasites header {
   min-height: 100vh;
   min-width: 100vh;
   background: url(./src/assets/image.jpg) center/cover,no-repeat;
 }
 
-.chirurgie img {
+.parasites img {
   margin-left: 35vmax;
   height: 20vh;
   width: 20vh;
@@ -47,14 +34,9 @@
   border-bottom: 100vmax solid #364945;
   border-left: 90px solid TRANSPARENT;
   border-right: 0px solid TRANSPARENT;
- }
-
-.content {
-  position: relative;
-  top:-85vmax
 }
 
-.visite {
-    margin-left: 20px;
-    margin-bottom: 20px;
+.parasites .content {
+  margin-top: -90vmax;
+  margin-bottom: 2vmax;
 }

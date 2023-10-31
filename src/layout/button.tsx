@@ -7,17 +7,18 @@ import Button from '@mui/material/Button';
 import Fade from '@mui/material/Fade';
 import Paper from '@mui/material/Paper';
 import styles from './button.module.scss';
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 export default function MenuListComposition() {
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [open, setOpen] = useState(false);
   const [placement, setPlacement] = useState<PopperPlacementType>();
+  const currentLocation = useLocation();
   const myButtons = [
-  {id:0, slots:[{text:"EQUIPE", link:"/#equipe"}, {text: "CLINIQUE", link: "/#clinique"}, {text:"JOINDRE", link: "/#joindre"}, {text:"tarif", link:"/#tarif"}, {text:"CGF", link:"/#CGF"}]}, 
-  {id:1, slots:[{text:"CHIRURGIE", link:"Chirurgie"}, {text:"MEDECINE", link:"Medecine"}, {text:"IMAGERIE", link:"Imagerie"}, {text:"DEPOT MINUTE", link:"Depot"}, {text:"E-BOUTIQUE", link:"E-boutique"}, {text:"URGENCE", link:"Urgence"}]}, 
-  {id:2, slots:[{text:"VACCINS", link:"Vaccins"}, {text:"STERILISATION", link:"Sterilisation"}, {text:"MODE DE VIE", link:"Mode_de_vie"}, {text:"LUTTE ANTIPARASITAIRE", link:"Lutte antiparasitaire"}, {text:"QUAND CONSULTER", link:"Consult"}]}, 
-  {id:3, slots:[{text:"CONTACT", link:"Contact"}]}]
+    {id:0, slots:[{text:"EQUIPE", link:"/#equipe"}, {text: "CLINIQUE", link: "/#clinique"}, {text:"JOINDRE", link: "/#joindre"}, {text:"tarif", link:"/#tarif"}, {text:"CGF", link:"/#CGF"}]}, 
+    {id:1, slots:[{text:"CHIRURGIE", link:"/Chirurgie"}, {text:"MEDECINE", link:"/Medecine"}, {text:"IMAGERIE", link:"/Imagerie"}, {text:"DEPOT MINUTE", link:"/Depot"}, {text:"E-BOUTIQUE", link:"/E-boutique"}, {text:"URGENCE", link:"/Urgence"}, {text:"LABORATOIRE", link:"/laboratoire"}]}, 
+    {id:2, slots:[{text:"VACCINS", link:"/Vaccins"}, {text:"STERILISATION", link:"/Sterilisation"}, {text:"MODE DE VIE", link:"/Mode_de_vie"}, {text:"LUTTE ANTIPARASITAIRE", link:"/Lutte antiparasitaire"}, {text:"QUAND CONSULTER", link:"/Consult"}]}, 
+    {id:3, slots:[{text:"CONTACT", link:"/Contact"}]}]
   const [button_index, setbutton_index] = useState(0)
 
   const push_button_index = (nb: number) => {
@@ -40,7 +41,11 @@ export default function MenuListComposition() {
             <Paper>
               <div>
               {myButtons[button_index].slots.map((newButton) =>
-              <Link to={newButton.link} className={styles.drop_down} key={newButton.text}>{newButton.text}</Link>
+              <Link to={newButton.link} className={styles.drop_down} key={newButton.text} onClick={(e) =>{
+                if (currentLocation.pathname === '/'+newButton.link) {
+                  e.preventDefault()
+                  window.scroll(0,0)
+              }}}>{newButton.text}</Link>
               )}
               </div>
             </Paper>
