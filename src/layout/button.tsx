@@ -15,8 +15,8 @@ export default function MenuListComposition() {
   const [placement, setPlacement] = useState<PopperPlacementType>();
   const currentLocation = useLocation();
   const myButtons = [
-    {id:0, slots:[{text:"EQUIPE", link:"/#equipe"}, {text: "CLINIQUE", link: "/#clinique"}, {text:"JOINDRE", link: "/#joindre"}, {text:"tarif", link:"/#tarif"}, {text:"CGF", link:"/#CGF"}]}, 
-    {id:1, slots:[{text:"CHIRURGIE", link:"/Chirurgie"}, {text:"MEDECINE", link:"/Medecine"}, {text:"IMAGERIE", link:"/Imagerie"}, {text:"DEPOT MINUTE", link:"/Depot"}, {text:"E-BOUTIQUE", link:"/E-boutique"}, {text:"URGENCE", link:"/Urgence"}, {text:"LABORATOIRE", link:"/laboratoire"}]}, 
+    {id:0, slots:[{text:"EQUIPE", link:"/#equipe"}, {text: "CLINIQUE", link: "/#clinique"}, {text:"JOINDRE", link: "/#joindre"}, {text:"TARIF", link:"/#tarif"}, {text:"CGF", link:"/#CGF"}]}, 
+    {id:1, slots:[{text:"CHIRURGIE", link:"/Chirurgie"}, {text:"MEDECINE", link:"/Medecine"}, {text:"IMAGERIE", link:"/Imagerie"}, {text:"DEPOT MINUTE", link:"/Depot"}, {text:"E-BOUTIQUE", link:"/E-boutique"}, {text:"URGENCE", link:"/Urgence"}]}, 
     {id:2, slots:[{text:"VACCINS", link:"/Vaccins"}, {text:"STERILISATION", link:"/Sterilisation"}, {text:"MODE DE VIE", link:"/Mode_de_vie"}, {text:"LUTTE ANTIPARASITAIRE", link:"/Lutte antiparasitaire"}, {text:"QUAND CONSULTER", link:"/Consult"}]}, 
     {id:3, slots:[{text:"CONTACT", link:"/Contact"}]}]
   const [button_index, setbutton_index] = useState(0)
@@ -58,8 +58,12 @@ export default function MenuListComposition() {
           <Button id="0" sx={{color: "white"}}onClick={handleClick('top-start')}>ACCUEIL</Button>
           <Button id="1" sx={{color: "white"}}onClick={handleClick('top-start')}>SERVICES</Button>
           <Button id="2" sx={{color: "white"}}onClick={handleClick('top-start')}>NOS CONSEILS</Button>
-          <Button id="3" sx={{color: "white"}}onClick={handleClick('top-start')}>CONTACT</Button>
-          <Button id="4" sx={{color: "white"}}onClick={handleClick('top-start')}>BOUTIQUE EN LIGNE</Button>
+          <Link to={"/Contact"} onClick={(e) =>{
+                if (currentLocation.pathname === '/CONTACT') {
+                  e.preventDefault()
+                  window.scroll(0,0)
+              }}}>CONTACT</Link>
+          <a href='https://www.chronovet.fr/connexion?create_account=1&d_clinic=1650?create_account=1&d_clinic=1650'>BOUTIQUE EN LIGNE</a>
           </div>
         </Grid>
       </Grid>

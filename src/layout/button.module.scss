@@ -1,6 +1,19 @@
 * {
     box-sizing: border-box;
 }
+
+.menu a {
+    padding-left: 6px;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration-color: #364945;
+}
+
 .menu {
     justify-content: center;
     margin-left: 35vmax;
