@@ -79,6 +79,11 @@
   margin: 10px;
 }
 
+.content a {
+  padding-top: 5vh;
+  margin-left: 10vh;
+}
+
 .type{
   background-color: #364945;
 }
@@ -99,12 +104,10 @@
   border-bottom: 188vmax solid #364945;
 }
 .equipe {
-  position: relative;
-  top:-92vmax;
+  margin-top:-90vmax;
 }
 .content {
-  position: relative;
-  top:-270vmax
+  margin-top:-180vmax
 }
 
 .tarif {
