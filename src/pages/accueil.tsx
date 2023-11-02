@@ -25,7 +25,7 @@ export default function Accueil() {
       <div>
       <MenuListComposition/>
       </div>
-      <img src="./src/assets/logo.jpg" alt="logo" />
+      <img src="/src/assets/logo.jpg" alt="logo" />
       <h1>Bienvenue à la clinique vétérinaire VET SUR JALLES</h1>
       <h1>DR Dominique VENEQUE</h1>
       </header>
