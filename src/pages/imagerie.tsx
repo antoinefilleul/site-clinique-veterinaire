@@ -1,12 +1,13 @@
 import MenuListComposition from "../layout/button"
 import styles from "./imagerie.module.scss"
+import logoUrl from '../assets/logo.jpg'
 
 export default function Imagerie() {
     return(
         <div className={styles.imagerie}>
             <header>
                 <MenuListComposition/>
-                <img src="./src/assets/logo.jpg" alt="logo" />
+                <img src={logoUrl} alt="logo" />
                 <h1>IMAGERIE</h1>
             </header>
             <div className={styles.trapeze}></div>

@@ -1,12 +1,13 @@
 import MenuListComposition from "../layout/button"
 import styles from './chirurgie.module.scss'
+import logoUrl from '../assets/logo.jpg'
 
 export default function Chirurgie() {
     return (
         <div className={styles.chirurgie}>
             <header>
                 <MenuListComposition/>
-                <img src="./src/assets/logo.jpg" alt="logo" />
+                <img src={logoUrl} alt="logo" />
                 <h1>CHIRURGIE</h1>
             </header>
             <div className={styles.trapeze}></div>

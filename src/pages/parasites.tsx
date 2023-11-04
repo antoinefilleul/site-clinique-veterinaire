@@ -1,12 +1,13 @@
 import MenuListComposition from "../layout/button"
 import styles from "./parasites.module.scss"
+import logoUrl from '../assets/logo.jpg'
 
 export default function Lutte_parasitaire() {
     return (
         <div className={styles.parasites}>
             <header>
                 <MenuListComposition/>
-                <img src="./src/assets/logo.jpg" alt="logo" />
+                <img src={logoUrl} alt="logo" />
                 <h1>LUTTE ANTIPARASITAIRE</h1>
             </header>
             <div className={styles.trapeze}></div>

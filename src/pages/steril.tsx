@@ -1,12 +1,13 @@
 import MenuListComposition from "../layout/button"
 import styles from "./steril.module.scss"
+import logoUrl from '../assets/logo.jpg'
 
 export default function Sterilisation() {
   return (
    <div className={styles.steril}>
      <header>
        <MenuListComposition/>
-       <img src="./src/assets/logo.jpg" alt="logo" />
+       <img src={logoUrl} alt="logo" />
        <h1>STERILISATION</h1>
      </header>
      <div className={styles.trapeze}></div>
