@@ -1,12 +1,13 @@
 import MenuListComposition from "../layout/button"
 import styles from "./vaccins.module.scss"
+import logoUrl from '../assets/logo.jpg'
 
 export default function Vaccins() {
     return (
         <div className={styles.vaccin}>
             <header>
                 <MenuListComposition/>
-                <img src="./src/assets/logo.jpg" alt="logo" />
+                <img src={logoUrl} alt="logo" />
                 <h1>VACCINS</h1>
             </header>
             <div className={styles.trapeze}></div>
