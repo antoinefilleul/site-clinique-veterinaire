@@ -1,15 +1,16 @@
 import MenuListComposition from "../layout/button"
 import styles from "./medecine.module.scss"
 import logoUrl from '../assets/logo.jpg'
+import bgUrl from '../assets/image.jpg'
 
 export default function Medecine() {
     return(
         <div className={styles.medecine}>
-        <header>
+          <div className={styles.header} style={{ backgroundImage: `url(${bgUrl})` }}>
             <MenuListComposition/>
             <img src={logoUrl} alt="logo" />
             <h1>MEDECINE</h1>
-        </header>
+        </div>
       <div className={styles.trapeze}></div>
       <div className={styles.content}>
         <h2>LA CONSULTATION VACCINALE</h2>

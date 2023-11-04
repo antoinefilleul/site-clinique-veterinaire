@@ -6,6 +6,7 @@ import { divIcon, point } from "leaflet";
 import MenuListComposition from "../layout/button";
 import styles from './contact.module.scss'
 import { LatLngExpression } from "leaflet";
+import bgUrl from '../assets/image.jpg'
 
 const createClusterCustomIcon = function (cluster: { getChildCount: () => any; }) {
   return divIcon({
@@ -19,7 +20,7 @@ export default function Contact() {
   const defaultPosition: LatLngExpression = [44.8096, -0.7624];
   return (
     <div className={styles.contact}>
-      <header>
+      <div className={styles.header} style={{ backgroundImage: `url(${bgUrl})` }}>
       <MenuListComposition/>
         <h1>CONTACT</h1>
         <h2>addresse : 1521 av de Bordeaux</h2>
@@ -39,7 +40,7 @@ export default function Contact() {
         </MapContainer>
         <a className={styles.lien} href="https://maps.app.goo.gl/Rk5xMMsNYZe9suKK9">google map</a>
         <a className={styles.lien} href="https://www.pilepoils.vet/veterinaires/saint-jean-dillac/506939-1/vet-sur-jalles">prise de rendez-vous en ligne</a>
-        </header>
+        </div>
     </div>
   );
 }

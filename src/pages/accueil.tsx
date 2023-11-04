@@ -1,6 +1,7 @@
 import styles from './accueil.module.scss'
 import MenuListComposition from '../layout/button';
 import logoUrl from '../assets/logo.jpg'
+import bgUrl from '../assets/image.jpg'
 
 export default function Accueil() {
   const tarifs = [
@@ -22,14 +23,12 @@ export default function Accueil() {
     )
   return (
     <div className={styles.accueil}>
-      <header>
-      <div>
+      <div className={styles.header} style={{ backgroundImage: `url(${bgUrl})` }}>
       <MenuListComposition/>
-      </div>
       <img src={logoUrl} alt="logo" />
       <h1>Bienvenue à la clinique vétérinaire VET SUR JALLES</h1>
       <h1>DR Dominique VENEQUE</h1>
-      </header>
+      </div>
       <div className={styles.trapeze}></div>
       <div className={styles.equipe}>
         <h2 id = "equipe">Equipe</h2>

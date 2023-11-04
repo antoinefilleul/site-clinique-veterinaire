@@ -1,15 +1,16 @@
 import MenuListComposition from "../layout/button"
 import styles from "./parasites.module.scss"
 import logoUrl from '../assets/logo.jpg'
+import bgUrl from '../assets/image.jpg'
 
 export default function Lutte_parasitaire() {
     return (
         <div className={styles.parasites}>
-            <header>
+            <div className={styles.header} style={{ backgroundImage: `url(${bgUrl})` }}>
                 <MenuListComposition/>
                 <img src={logoUrl} alt="logo" />
                 <h1>LUTTE ANTIPARASITAIRE</h1>
-            </header>
+            </div>
             <div className={styles.trapeze}></div>
             <div className={styles.content}>
             <h2>Il existe deux grandes sortes de parasites chez nos carnivores domestiques : les internes et lesexternes.</h2>

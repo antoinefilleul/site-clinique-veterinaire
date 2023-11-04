@@ -1,15 +1,16 @@
 import MenuListComposition from "../layout/button"
 import styles from './consult.module.scss'
 import logoUrl from '../assets/logo.jpg'
+import bgUrl from '../assets/image.jpg'
 
 export default function Consult () {
     return (
         <div className={styles.consult}>
-            <header>
+            <div className={styles.header} style={{ backgroundImage: `url(${bgUrl})` }}>
             <MenuListComposition/>
             <img src={logoUrl} alt="logo" />
             <h1>QUAND CONSULTER ?</h1>
-            </header>
+            </div>
             <div className={styles.trapeze}></div>
             <div className={styles.content}>
             <h2>Les consultations préventives : cela peut être pour les vaccins : ces rendez-vous sont annuels, un bilan de santé sera effectué, il peut être proposé des examens complémentaires ( radios, analyses sanguines) en fonction de l’examen général, de l’âge de l’animal. Un autre motif de consultation préventive peut être un bilan pubertaire. Entre 5 et 8 mois selon l’animal, ce bilan permet de vérifier la bonne croissance de l’animal, de vérifier la dentition, de parler éducation et stérilisation.</h2>

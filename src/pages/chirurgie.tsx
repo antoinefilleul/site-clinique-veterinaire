@@ -1,15 +1,16 @@
 import MenuListComposition from "../layout/button"
 import styles from './chirurgie.module.scss'
 import logoUrl from '../assets/logo.jpg'
+import bgUrl from '../assets/image.jpg'
 
 export default function Chirurgie() {
     return (
         <div className={styles.chirurgie}>
-            <header>
+            <div className={styles.header} style={{ backgroundImage: `url(${bgUrl})` }}>
                 <MenuListComposition/>
                 <img src={logoUrl} alt="logo" />
                 <h1>CHIRURGIE</h1>
-            </header>
+            </div>
             <div className={styles.trapeze}></div>
             <div className={styles.content}>
             <h2>Nous pratiquons la plupart des interventions chirurgicales des tissus mous</h2>

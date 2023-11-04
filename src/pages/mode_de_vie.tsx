@@ -1,15 +1,16 @@
 import MenuListComposition from "../layout/button"
 import styles from "./mode_de_vie.module.scss"
 import logoUrl from '../assets/logo.jpg'
+import bgUrl from '../assets/image.jpg'
 
 export default function Mode_de_vie () {
     return (
         <div className={styles.mdv}>
-            <header>
+            <div className={styles.header} style={{ backgroundImage: `url(${bgUrl})` }}>
                 <MenuListComposition/>
                 <img src={logoUrl} alt="logo" />
             <h1>MODE DE VIE</h1>
-            </header>
+            </div>
             <div className={styles.trapeze}></div>
             <div className={styles.content}></div>
             <h2>Le mode de vie que vous avez choisi pour votre animal a une grande importance. Cela va influencer les pathologies qu’il peut rencontrer ainsi que les plans de prévention qu’il faut mettre en place. </h2>

@@ -1,3 +1,4 @@
+
 .boutique h1 {
     font-size: 300%;
     padding-top: 10px;
@@ -31,11 +32,12 @@
     max-width: 50%;
 }
 
-.boutique header {
+.header {
     min-height: 100vh;
     min-width: 100vh;
-    background: url(../assets/image.jpg) center/cover,no-repeat;
-}
+    background: center/cover,no-repeat;
+  }
+
 .boutique img {
     margin-left: 35vmax;
     height: 20vh;
