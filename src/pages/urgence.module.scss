@@ -1,39 +1,44 @@
 .urgence h1 {
-    font-size: 300%;
-    color: white;
-    text-align: center;
-  }
-    
-  .urgence h2 {
-    margin-right: 30vh;
-    margin-left: 30vh;
-  }
-  
-.header {
-    min-height: 100vh;
-    min-width: 100vh;
-    background: center/cover,no-repeat;
+  font-size: 300%;
+  color: white;
+  text-align: center;
 }
   
-  .urgence img {
-    margin-left: 35vmax;
-    height: 20vh;
-    width: 20vh;
-  }
+.urgence h2 {
+  margin-right: 30vh;
+  margin-left: 30vh;
+}
+
+.menustick {
+  z-index: 3;
+  position: fixed;
+}
+.header {
+  min-height: 100vh;
+  min-width: 100vh;
+  background: center/cover,no-repeat;
+}
   
-  .trapeze {
-    position: relative;
-    top: -45vmax;
-    left: 44.1vmax;
-    transform: rotate(270deg) scale(1, -1);
-    height: 0;
-    width: 10vmax;
-    border-top: 0px solid transparent;
-    border-bottom: 100vmax solid #364945;
-    border-left: 90px solid TRANSPARENT;
-    border-right: 0px solid TRANSPARENT;
-  }
-  
+.urgence img {
+  margin-top: 35px;
+  margin-left: 35vmax;
+  height: 20vh;
+  width: 20vh;
+}
+
+.trapeze {
+  position: relative;
+  top: -45vmax;
+  left: 44.1vmax;
+  transform: rotate(270deg) scale(1, -1);
+  height: 0;
+  width: 10vmax;
+  border-top: 0px solid transparent;
+  border-bottom: 100vmax solid #364945;
+  border-left: 90px solid TRANSPARENT;
+  border-right: 0px solid TRANSPARENT;
+}
+
 .content {
   margin-top: 10%;
   border-radius: 2rem;

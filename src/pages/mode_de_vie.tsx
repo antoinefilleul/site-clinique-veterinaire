@@ -6,8 +6,10 @@ import bgUrl from '../assets/image.jpg'
 export default function Mode_de_vie () {
     return (
         <div className={styles.mdv}>
-            <div className={styles.header} style={{ backgroundImage: `url(${bgUrl})` }}>
+            <div className={styles.menustick}>
                 <MenuListComposition/>
+            </div>
+            <div className={styles.header} style={{ backgroundImage: `url(${bgUrl})` }}>
                 <img src={logoUrl} alt="logo" />
             <h1>MODE DE VIE</h1>
             </div>

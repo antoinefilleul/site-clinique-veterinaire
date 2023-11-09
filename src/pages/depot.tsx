@@ -6,8 +6,10 @@ import bgUrl from '../assets/image.jpg'
 export default function Depot() {
     return(
         <div className={styles.depot}>
+            <div className={styles.menustick}>
+                <MenuListComposition/>
+            </div>
             <div className={styles.header} style={{ backgroundImage: `url(${bgUrl})` }}>
-            <MenuListComposition/>
             <img src={logoUrl} alt="logo" />
             <h1>DEPOT MINUTE</h1>
             </div>

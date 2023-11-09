@@ -17,10 +17,20 @@ export default function MenuListComposition() {
   const location = useLocation();
   const myButtons = [
     {id:0, slots:[{text:"EQUIPE", link:"/#equipe"}, {text:"JOINDRE", link: "/#joindre"}, {text:"TARIF", link:"/#tarif"}, {text:"CGF", link:"/#CGF"}]}, 
-    {id:1, slots:[{text:"CHIRURGIE", link:"/Chirurgie"}, {text:"MEDECINE", link:"/Medecine"}, {text:"IMAGERIE", link:"/Imagerie"}, {text:"DEPOT MINUTE", link:"/Depot"}, {text:"E-BOUTIQUE", link:"/E-boutique"}, {text:"URGENCE", link:"/Urgence"}]}, 
+    {id:1, slots:[{text:"CHIRURGIE", link:"/Chirurgie"}, {text:"MEDECINE", link:"/Medecine"}, {text:"IMAGERIE", link:"/Imagerie"}, {text:"DEPOT MINUTE", link:"/Depot"}, {text:"E-BOUTIQUE", link:"/E-boutique"}, {text:"URGENCE", link:"/Urgence"}, {text:"LABORATOIRE", link:"/Laboratoire"}]}, 
     {id:2, slots:[{text:"VACCINS", link:"/Vaccins"}, {text:"STERILISATION", link:"/Sterilisation"}, {text:"MODE DE VIE", link:"/Mode_de_vie"}, {text:"LUTTE ANTIPARASITAIRE", link:"/Lutte antiparasitaire"}, {text:"QUAND CONSULTER", link:"/Consult"}]}, 
     {id:3, slots:[{text:"CONTACT", link:"/Contact"}]}]
   const [button_index, setbutton_index] = useState(0)
+  const [isMouseOverButtonOrPopper, setIsMouseOverButtonOrPopper] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+    if (!isMouseOverButtonOrPopper) {
+      setOpen(false);
+    }
+  }, 100);
+
+  return () => clearTimeout(timer);
+  }, [isMouseOverButtonOrPopper]);
 
   useEffect(() => {
     if (location.hash) {
@@ -38,15 +48,17 @@ export default function MenuListComposition() {
   const handleHover =
     (newPlacement: PopperPlacementType) =>
     (event: React.MouseEvent<HTMLButtonElement>) => {
-      setAnchorEl(event.currentTarget);
-      push_button_index(parseInt(event.currentTarget.id))
-      setOpen(true);
-      setPlacement(newPlacement);
+    setAnchorEl(event.currentTarget);
+    push_button_index(parseInt(event.currentTarget.id))
+    setOpen(true);
+    setPlacement(newPlacement);
+    setIsMouseOverButtonOrPopper(true);
   };
 
     return (
       <Box sx={{ width: 500 }}>
-        <Popper onMouseLeave={() => setOpen(false)} open={open} anchorEl={anchorEl} placement={placement} transition>
+        <Popper onMouseEnter={() => setIsMouseOverButtonOrPopper(true)}
+         onMouseLeave={() => setIsMouseOverButtonOrPopper(false)} open={open} anchorEl={anchorEl} placement={placement} transition>
           {({ TransitionProps }) => (
           <Fade {...TransitionProps} timeout={350}>
             <Paper>
@@ -66,15 +78,18 @@ export default function MenuListComposition() {
       <Grid>
         <Grid item>
           <div className={styles.menu}>
-          <Button id="0" sx={{color: "white"}}onMouseEnter={handleHover('top-start')}>
+          <Button id="0" sx={{color: "white"}}onMouseEnter={handleHover('top-start')}
+            onMouseLeave={() => setIsMouseOverButtonOrPopper(false)}>
             <Link to={"/"} onClick={(e) =>{
                 if (currentLocation.pathname === '/') {
                   e.preventDefault()
                   window.scroll(0,0)}}}>
                   ACCEUIL</Link>
           </Button>
-          <Button id="1" sx={{color: "white"}}onMouseEnter={handleHover('top-start')}>SERVICES</Button>
-          <Button id="2" sx={{color: "white"}}onMouseEnter={handleHover('top-start')}>NOS CONSEILS</Button>
+          <Button id="1" sx={{color: "white"}}onMouseEnter={handleHover('top-start')}
+            onMouseLeave={() => setIsMouseOverButtonOrPopper(false)}>SERVICES</Button>
+          <Button id="2" sx={{color: "white"}}onMouseEnter={handleHover('top-start')}
+            onMouseLeave={() => setIsMouseOverButtonOrPopper(false)}>NOS CONSEILS</Button>
           <Link to={"/Contact"} onClick={(e) =>{
                 if (currentLocation.pathname === '/CONTACT') {
                   e.preventDefault()

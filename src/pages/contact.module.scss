@@ -1,4 +1,10 @@
+.menustick {
+  z-index: 3;
+  position: fixed;
+}
+
 .contact h1 {
+    padding-top: 35px;
     font-size: 300%;
     color: white;
     text-align: center;

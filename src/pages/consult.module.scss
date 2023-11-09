@@ -1,44 +1,51 @@
 .consult h1 {
-    font-size: 300%;
-    color: white;
-    text-align: center;
-  }
-  
-  .consult h2 {
-      padding-top: 10vh;
-      border-top: 2px solid #364945;
-      margin-right: 30vh;
-      margin-left: 30vh;
-      margin-top: 10vh;
-  }
-  
+  font-size: 300%;
+  color: white;
+  text-align: center;
+}
+
+.consult h2 {
+    padding-top: 10vh;
+    border-top: 2px solid #364945;
+    margin-right: 30vh;
+    margin-left: 30vh;
+    margin-top: 10vh;
+}
+
+.menustick {
+  z-index: 3;
+  position: fixed;
+}
+
 .header {
-    min-height: 100vh;
-    min-width: 100vh;
-    background: center/cover,no-repeat;
-  }
-  
+  min-height: 92vh;
+  min-width: 100vh;
+  background: center/cover,no-repeat;
+}
+
 .consult img {
-    margin-left: 35vmax;
-    height: 20vh;
-    width: 20vh;
-  }
-  
-  .trapeze {
-    position: relative;
-    top: -45vmax;
-    left: 44.1vmax;
-    transform: rotate(270deg) scale(1, -1);
-    height: 0;
-    width: 10vmax;
-    border-top: 0px solid transparent;
-    border-bottom: 100vmax solid #364945;
-    border-left: 90px solid TRANSPARENT;
-    border-right: 0px solid TRANSPARENT;
-   }
-  
-  .content {
-    position: relative;
-    top:-85vmax
-  }
+  margin-top: 35px;
+  margin-left: 35vmax;
+  height: 20vh;
+  width: 20vh;
+}
+
+.trapeze {
+  position: relative;
+  top: -46vmax;
+  left: 44.1vmax;
+  transform: rotate(270deg) scale(1, -1);
+  height: 0;
+  width: 10vmax;
+  border-top: 0px solid transparent;
+  border-bottom: 100vmax solid #364945;
+  border-left: 90px solid TRANSPARENT;
+  border-right: 0px solid TRANSPARENT;
+}
+
+.content {
+  position: relative;
+  margin-top:-85vmax;
+  padding-bottom:20px;
+}
   

@@ -17,13 +17,20 @@
   margin-bottom: 2vh;
   padding-right: 10vh;
 }
+
+.menustick {
+  z-index: 3;
+  position: fixed;
+}
+
 .header {
-  min-height: 100vh;
+  min-height: 90vh;
   min-width: 100vh;
   background: center/cover,no-repeat;
 }
 
 .steril img {
+  margin-top: 35px;
   margin-left: 35vmax;
   height: 20vh;
   width: 20vh;

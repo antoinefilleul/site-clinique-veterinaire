@@ -20,8 +20,10 @@ export default function Contact() {
   const defaultPosition: LatLngExpression = [44.8096, -0.7624];
   return (
     <div className={styles.contact}>
+      <div className={styles.menustick}>
+        <MenuListComposition/>
+      </div>
       <div className={styles.header} style={{ backgroundImage: `url(${bgUrl})` }}>
-      <MenuListComposition/>
         <h1>CONTACT</h1>
         <h2>addresse : 1521 av de Bordeaux</h2>
         <h2>email: vetsurjalles@gmail.com</h2>

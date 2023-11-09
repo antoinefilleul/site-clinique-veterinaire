@@ -1,12 +1,16 @@
-
 .boutique h1 {
     font-size: 300%;
     padding-top: 10px;
     color: white;
     text-align: center;
 }
+.menustick {
+    z-index: 3;
+    position: fixed;
+}
 
 .boutique img {
+  margin-top: 35px;
   margin-left: 35vmax;
   height: 20vh;
   width: 20vh;

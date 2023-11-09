@@ -3,7 +3,12 @@
   color: white;
   text-align: center;
 }
-  
+
+.menustick {
+  z-index: 3;
+  position: fixed;
+}
+
 .mdv h2 {
   padding-top: 10vh;
   border-bottom: 2px solid #364945;
@@ -18,12 +23,13 @@
   padding-right: 10vh;
 }
 .header {
-  min-height: 100vh;
+  min-height: 90vh;
   min-width: 100vh;
   background: center/cover,no-repeat;
 }
 
 .mdv img {
+  margin-top: 35px;
   margin-left: 35vmax;
   height: 20vh;
   width: 20vh;

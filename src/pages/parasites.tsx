@@ -6,8 +6,10 @@ import bgUrl from '../assets/image.jpg'
 export default function Lutte_parasitaire() {
     return (
         <div className={styles.parasites}>
-            <div className={styles.header} style={{ backgroundImage: `url(${bgUrl})` }}>
+            <div className={styles.menustick}>
                 <MenuListComposition/>
+            </div>
+            <div className={styles.header} style={{ backgroundImage: `url(${bgUrl})` }}>
                 <img src={logoUrl} alt="logo" />
                 <h1>LUTTE ANTIPARASITAIRE</h1>
             </div>

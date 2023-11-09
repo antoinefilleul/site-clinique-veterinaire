@@ -6,8 +6,10 @@ import bgUrl from '../assets/image.jpg'
 export default function Consult () {
     return (
         <div className={styles.consult}>
+            <div className={styles.menustick}>
+                <MenuListComposition/>
+            </div>
             <div className={styles.header} style={{ backgroundImage: `url(${bgUrl})` }}>
-            <MenuListComposition/>
             <img src={logoUrl} alt="logo" />
             <h1>QUAND CONSULTER ?</h1>
             </div>

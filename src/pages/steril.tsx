@@ -6,8 +6,10 @@ import bgUrl from '../assets/image.jpg'
 export default function Sterilisation() {
   return (
    <div className={styles.steril}>
+      <div className={styles.menustick}>
+        <MenuListComposition/>
+      </div>
       <div className={styles.header} style={{ backgroundImage: `url(${bgUrl})` }}>
-       <MenuListComposition/>
        <img src={logoUrl} alt="logo" />
        <h1>STERILISATION</h1>
      </div>
