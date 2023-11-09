@@ -8,6 +8,11 @@
   font-family: palatino;
 }
 
+.menustick {
+  z-index: 3;
+  position: fixed;
+}
+
 .accueil h1 {
   font-size: 300%;
   padding-top: 10px;
@@ -26,17 +31,18 @@
 }
 
 .accueil h4 {
-  margin-top: 5vh;
+  margin-top: 3vh;
   margin-left: 5vh;
 }
 
 .header {
-  min-height: 100vh;
+  min-height: 90vh;
   min-width: 100vh;
   background: center/cover,no-repeat;
 }
 
 .accueil img {
+  margin-top: 33px;
   margin-left: 35vmax;
   height: 20vh;
   width: 20vh;
@@ -85,13 +91,24 @@
   margin-left: 10vh;
   margin-right: 30vh;
   max-width: 50%;
+  color: #0077b5;
+  font-weight: bold;
+  transition: color 0.2s;
 }
 
-.type{
+.lien:hover {
+  color: #004266;
+}
+
+.lien:active {
+  color: #ff6600;
+}
+
+.type {
   background-color: #364945;
 }
 
-.price{
+.price {
   background-color: gray;
 }
 
@@ -104,21 +121,57 @@
   border-top: 0;
   border-left: 5vmax solid transparent;
   border-right: 5vmax solid transparent;
-  border-bottom: 188vmax solid #364945;
+  border-bottom: 189vmax solid #364945;
 }
 .equipe {
   margin-top:-90vmax;
 }
 .content {
-  margin-top:-180vmax
+  margin-top:-180vmax;
+  margin-bottom:5vmax;
 }
 
 .tarif {
+  margin-top: 20px;
   border-top: solid black;
 }
 
-.CGF {
-  margin-right: 20vh;
+.CGF1 {
+  margin: 20px;
   border-top: solid black;
 }
 
+.CGF1 ul{
+  justify-content: flex-start;
+  display: flex;
+  padding: 0;
+}
+
+.CGF1 li {
+  display: flex;
+  justify-content: center;
+  min-height: 80px;
+  width: 250px;
+  margin: 5px;
+  list-style: none;
+  border: #364945 solid 2px;
+}
+
+.CGF2 {
+  margin: 20px;
+}
+
+.CGF2 ul{
+  display: flex;
+  padding: 0;
+}
+
+.CGF2 li {
+  display: flex;
+  justify-content: center;
+  min-height: 80px;
+  width: 250px;
+  margin: 5px;
+  list-style: none;
+  border: #364945 solid 2px;
+}

@@ -15,9 +15,9 @@
 }
 
 .menu {
+    background-color: gray;
     justify-content: center;
-    margin-left: 35vmax;
-    min-width: 60vh;
+    min-width: 100vmax;
     display: flex;
     text-align: center;
     text-decoration: underline;
@@ -31,4 +31,8 @@
     display: flex;
     text-decoration: none;
     justify-content: center;
+}
+
+.drop_down:hover {
+    background-color: #162220;
 }

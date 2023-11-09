@@ -15,7 +15,7 @@ export default function MenuListComposition() {
   const [placement, setPlacement] = useState<PopperPlacementType>();
   const currentLocation = useLocation();
   const myButtons = [
-    {id:0, slots:[{text:"EQUIPE", link:"/#equipe"}, {text: "CLINIQUE", link: "/#clinique"}, {text:"JOINDRE", link: "/#joindre"}, {text:"TARIF", link:"/#tarif"}, {text:"CGF", link:"/#CGF"}]}, 
+    {id:0, slots:[{text:"EQUIPE", link:"hash: '#equipe'"}, {text:"JOINDRE", link: "/#joindre"}, {text:"TARIF", link:"/#tarif"}, {text:"CGF", link:"/#CGF"}]}, 
     {id:1, slots:[{text:"CHIRURGIE", link:"/Chirurgie"}, {text:"MEDECINE", link:"/Medecine"}, {text:"IMAGERIE", link:"/Imagerie"}, {text:"DEPOT MINUTE", link:"/Depot"}, {text:"E-BOUTIQUE", link:"/E-boutique"}, {text:"URGENCE", link:"/Urgence"}]}, 
     {id:2, slots:[{text:"VACCINS", link:"/Vaccins"}, {text:"STERILISATION", link:"/Sterilisation"}, {text:"MODE DE VIE", link:"/Mode_de_vie"}, {text:"LUTTE ANTIPARASITAIRE", link:"/Lutte antiparasitaire"}, {text:"QUAND CONSULTER", link:"/Consult"}]}, 
     {id:3, slots:[{text:"CONTACT", link:"/Contact"}]}]
@@ -24,8 +24,15 @@ export default function MenuListComposition() {
   const push_button_index = (nb: number) => {
       setbutton_index(() => nb)
   }
-
-  const handleClick =
+  const handleLeave =
+    (newPlacement: PopperPlacementType) =>
+    (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+    push_button_index(parseInt(event.currentTarget.id))
+    setOpen((prev) => placement !== newPlacement || !prev);
+    setPlacement(newPlacement);
+  };
+  const handleHover =
     (newPlacement: PopperPlacementType) =>
     (event: React.MouseEvent<HTMLButtonElement>) => {
       setAnchorEl(event.currentTarget);
@@ -55,9 +62,9 @@ export default function MenuListComposition() {
       <Grid>
         <Grid item>
           <div className={styles.menu}>
-          <Button id="0" sx={{color: "white"}}onClick={handleClick('top-start')}>ACCUEIL</Button>
-          <Button id="1" sx={{color: "white"}}onClick={handleClick('top-start')}>SERVICES</Button>
-          <Button id="2" sx={{color: "white"}}onClick={handleClick('top-start')}>NOS CONSEILS</Button>
+          <Button id="0" sx={{color: "white"}} onMouseEnter={handleHover('top-start')}>ACCUEIL</Button>
+          <Button id="1" sx={{color: "white"}} onMouseEnter={handleHover('top-start')}>SERVICES</Button>
+          <Button id="2" sx={{color: "white"}} onMouseEnter={handleHover('top-start')}>NOS CONSEILS</Button>
           <Link to={"/Contact"} onClick={(e) =>{
                 if (currentLocation.pathname === '/CONTACT') {
                   e.preventDefault()
