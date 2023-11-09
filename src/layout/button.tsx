@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import Box from '@mui/material/Box';
 import Popper, { PopperPlacementType } from '@mui/material/Popper';
 import Grid from '@mui/material/Grid';
@@ -14,36 +14,40 @@ export default function MenuListComposition() {
   const [open, setOpen] = useState(false);
   const [placement, setPlacement] = useState<PopperPlacementType>();
   const currentLocation = useLocation();
+  const location = useLocation();
   const myButtons = [
-    {id:0, slots:[{text:"EQUIPE", link:"hash: '#equipe'"}, {text:"JOINDRE", link: "/#joindre"}, {text:"TARIF", link:"/#tarif"}, {text:"CGF", link:"/#CGF"}]}, 
+    {id:0, slots:[{text:"EQUIPE", link:"/#equipe"}, {text:"JOINDRE", link: "/#joindre"}, {text:"TARIF", link:"/#tarif"}, {text:"CGF", link:"/#CGF"}]}, 
     {id:1, slots:[{text:"CHIRURGIE", link:"/Chirurgie"}, {text:"MEDECINE", link:"/Medecine"}, {text:"IMAGERIE", link:"/Imagerie"}, {text:"DEPOT MINUTE", link:"/Depot"}, {text:"E-BOUTIQUE", link:"/E-boutique"}, {text:"URGENCE", link:"/Urgence"}]}, 
     {id:2, slots:[{text:"VACCINS", link:"/Vaccins"}, {text:"STERILISATION", link:"/Sterilisation"}, {text:"MODE DE VIE", link:"/Mode_de_vie"}, {text:"LUTTE ANTIPARASITAIRE", link:"/Lutte antiparasitaire"}, {text:"QUAND CONSULTER", link:"/Consult"}]}, 
     {id:3, slots:[{text:"CONTACT", link:"/Contact"}]}]
   const [button_index, setbutton_index] = useState(0)
 
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   const push_button_index = (nb: number) => {
       setbutton_index(() => nb)
   }
-  const handleLeave =
-    (newPlacement: PopperPlacementType) =>
-    (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
-    push_button_index(parseInt(event.currentTarget.id))
-    setOpen(false)
-    setPlacement(newPlacement);
-  };
+
   const handleHover =
     (newPlacement: PopperPlacementType) =>
     (event: React.MouseEvent<HTMLButtonElement>) => {
       setAnchorEl(event.currentTarget);
       push_button_index(parseInt(event.currentTarget.id))
-      setOpen((prev) => placement !== newPlacement || !prev);
+      setOpen(true);
       setPlacement(newPlacement);
-    };
+  };
+
     return (
       <Box sx={{ width: 500 }}>
-      <Popper open={open} anchorEl={anchorEl} placement={placement} transition>
-        {({ TransitionProps }) => (
+        <Popper onMouseLeave={() => setOpen(false)} open={open} anchorEl={anchorEl} placement={placement} transition>
+          {({ TransitionProps }) => (
           <Fade {...TransitionProps} timeout={350}>
             <Paper>
               <div>
@@ -62,14 +66,20 @@ export default function MenuListComposition() {
       <Grid>
         <Grid item>
           <div className={styles.menu}>
-          <Button id="0" sx={{color: "white"}}onMouseLeave={handleLeave('top-start')} onMouseEnter={handleHover('top-start')}>ACCUEIL</Button>
-          <Button id="1" sx={{color: "white"}}onMouseLeave={handleLeave('top-start')} onMouseEnter={handleHover('top-start')}>SERVICES</Button>
-          <Button id="2" sx={{color: "white"}}onMouseLeave={handleLeave('top-start')} onMouseEnter={handleHover('top-start')}>NOS CONSEILS</Button>
+          <Button id="0" sx={{color: "white"}}onMouseEnter={handleHover('top-start')}>
+            <Link to={"/"} onClick={(e) =>{
+                if (currentLocation.pathname === '/') {
+                  e.preventDefault()
+                  window.scroll(0,0)}}}>
+                  ACCEUIL</Link>
+          </Button>
+          <Button id="1" sx={{color: "white"}}onMouseEnter={handleHover('top-start')}>SERVICES</Button>
+          <Button id="2" sx={{color: "white"}}onMouseEnter={handleHover('top-start')}>NOS CONSEILS</Button>
           <Link to={"/Contact"} onClick={(e) =>{
                 if (currentLocation.pathname === '/CONTACT') {
                   e.preventDefault()
-                  window.scroll(0,0)
-              }}}>CONTACT</Link>
+                  window.scroll(0,0)}}}>
+                  CONTACT</Link>
           <a href='https://www.chronovet.fr/connexion?create_account=1&d_clinic=1650?create_account=1&d_clinic=1650'>BOUTIQUE EN LIGNE</a>
           </div>
         </Grid>

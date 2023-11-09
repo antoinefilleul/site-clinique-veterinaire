@@ -39,7 +39,7 @@ export default function Accueil() {
       </div>
       <div className={styles.triangle}></div>
       <div className={styles.content}>
-        <h2>Nous Joindre</h2>
+        <h2 id = "joindre">Nous Joindre</h2>
         <h3>adresse : 1521 Avenue de Bordeaux 3317 ST Jean d'Illac</h3>
         <h3>tel :+33 05 33 09 08 00</h3>
         <h3>vetsurjalles@gmail.com</h3>

@@ -144,7 +144,7 @@
 .CGF1 ul{
   margin-left: 20px;
   margin-right: 20px;
-  justify-content: flex-start;
+  justify-content: space-between;
   display: flex;
   padding: 0;
 }
@@ -166,6 +166,7 @@
 
 .CGF2 ul{
   display: flex;
+  justify-content: space-between;
   padding: 0;
 }
 
