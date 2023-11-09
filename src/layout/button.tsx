@@ -29,7 +29,7 @@ export default function MenuListComposition() {
     (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
     push_button_index(parseInt(event.currentTarget.id))
-    setOpen((prev) => placement !== newPlacement || !prev);
+    setOpen(false)
     setPlacement(newPlacement);
   };
   const handleHover =
@@ -62,9 +62,9 @@ export default function MenuListComposition() {
       <Grid>
         <Grid item>
           <div className={styles.menu}>
-          <Button id="0" sx={{color: "white"}} onMouseEnter={handleHover('top-start')}>ACCUEIL</Button>
-          <Button id="1" sx={{color: "white"}} onMouseEnter={handleHover('top-start')}>SERVICES</Button>
-          <Button id="2" sx={{color: "white"}} onMouseEnter={handleHover('top-start')}>NOS CONSEILS</Button>
+          <Button id="0" sx={{color: "white"}}onMouseLeave={handleLeave('top-start')} onMouseEnter={handleHover('top-start')}>ACCUEIL</Button>
+          <Button id="1" sx={{color: "white"}}onMouseLeave={handleLeave('top-start')} onMouseEnter={handleHover('top-start')}>SERVICES</Button>
+          <Button id="2" sx={{color: "white"}}onMouseLeave={handleLeave('top-start')} onMouseEnter={handleHover('top-start')}>NOS CONSEILS</Button>
           <Link to={"/Contact"} onClick={(e) =>{
                 if (currentLocation.pathname === '/CONTACT') {
                   e.preventDefault()

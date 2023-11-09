@@ -137,24 +137,27 @@
 }
 
 .CGF1 {
-  margin: 20px;
+  margin-top: 20px;
   border-top: solid black;
 }
 
 .CGF1 ul{
+  margin-left: 20px;
+  margin-right: 20px;
   justify-content: flex-start;
   display: flex;
   padding: 0;
 }
 
 .CGF1 li {
+  font-weight: bold;
   display: flex;
   justify-content: center;
   min-height: 80px;
   width: 250px;
   margin: 5px;
   list-style: none;
-  border: #364945 solid 2px;
+  border-bottom:#364945 solid 4px;
 }
 
 .CGF2 {
@@ -167,11 +170,13 @@
 }
 
 .CGF2 li {
+  font-weight: bold;
+  font-size: 16px;
   display: flex;
   justify-content: center;
   min-height: 80px;
   width: 250px;
   margin: 5px;
   list-style: none;
-  border: #364945 solid 2px;
+  border-bottom:#364945 solid 4px;
 }
