@@ -84,7 +84,7 @@ export default function MenuListComposition() {
                 if (currentLocation.pathname === '/') {
                   e.preventDefault()
                   window.scroll(0,0)}}}>
-                  ACCEUIL</Link>
+                  ACCUEIL</Link>
           </Button>
           <Button id="1" sx={{color: "white"}}onMouseEnter={handleHover('top-start')}
             onMouseLeave={() => setIsMouseOverButtonOrPopper(false)}>SERVICES</Button>
