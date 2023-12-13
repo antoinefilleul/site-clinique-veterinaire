@@ -53,7 +53,7 @@ const router = createBrowserRouter([
     element: <Contact/>
   },
   {
-    path: 'Lutte antiparasitaire',
+    path: 'Lutte_antiparasitaire',
     errorElement: <ErrorPage/>,
     element: <Lutte_parasitaire/>
   },

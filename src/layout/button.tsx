@@ -18,7 +18,7 @@ export default function MenuListComposition() {
   const myButtons = [
     {id:0, slots:[{text:"EQUIPE", link:"/#equipe"}, {text:"JOINDRE", link: "/#joindre"}, {text:"TARIF", link:"/#tarif"}, {text:"CGF", link:"/#CGF"}]}, 
     {id:1, slots:[{text:"CHIRURGIE", link:"/Chirurgie"}, {text:"MEDECINE", link:"/Medecine"}, {text:"IMAGERIE", link:"/Imagerie"}, {text:"DEPOT MINUTE", link:"/Depot"}, {text:"E-BOUTIQUE", link:"/E-boutique"}, {text:"URGENCE", link:"/Urgence"}, {text:"LABORATOIRE", link:"/Laboratoire"}]}, 
-    {id:2, slots:[{text:"VACCINS", link:"/Vaccins"}, {text:"STERILISATION", link:"/Sterilisation"}, {text:"MODE DE VIE", link:"/Mode_de_vie"}, {text:"LUTTE ANTIPARASITAIRE", link:"/Lutte antiparasitaire"}, {text:"QUAND CONSULTER", link:"/Consult"}]}, 
+    {id:2, slots:[{text:"VACCINS", link:"/Vaccins"}, {text:"STERILISATION", link:"/Sterilisation"}, {text:"MODE DE VIE", link:"/Mode_de_vie"}, {text:"LUTTE ANTIPARASITAIRE", link:"/Lutte_antiparasitaire"}, {text:"QUAND CONSULTER", link:"/Consult"}]}, 
     {id:3, slots:[{text:"CONTACT", link:"/Contact"}]}]
   const [button_index, setbutton_index] = useState(0)
   const [isMouseOverButtonOrPopper, setIsMouseOverButtonOrPopper] = useState(false);
