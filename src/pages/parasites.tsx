@@ -10,6 +10,7 @@ export default function Lutte_parasitaire() {
             <Helmet>
                 <title>Lutte Anti Parasitaire Vet Sur Jalles</title>
                 <meta name="description" content="clinique vétérinaire vet sur jalles à Saint Jean d'Illac. Il existe deux grandes sortes de parasites chez nos carnivores domestiques : les internes et les externes. Les paraites internes : ce sont en France métropolitaine, principalement des vers digestifs ( plats ou ronds) et quelques vers pulmonaires. Les parasites externes : il s’agit principalement des puces et des tiques. Des moyens de lutte adaptés à votre animal sont disponibles ( cachets, pipettes, colliers) , n’hésitez pas à nous demander conseil"/>
+                <link rel="canonical" href="/Lutte antiparasitaire" />
             </Helmet>
             <div className={styles.menustick}>
                 <MenuListComposition/>

@@ -26,6 +26,7 @@ export default function Accueil() {
       <Helmet>
         <title>Accueil</title>
         <meta name="description" content="Clinique vétarinaire du Docteur Dominique Filleul."/>
+        <link rel="canonical" href="/" />
       </Helmet>
       <div className={styles.menustick}>
         <MenuListComposition/>

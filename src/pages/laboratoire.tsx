@@ -10,6 +10,7 @@ export default function Laboratoire() {
             <Helmet>
                 <title>Laboratoire Vet Sur Jalles</title>
                 <meta name="description" content="clinique vétérinaire vet sur jalles à Saint Jean d'Illac. La clinique est équipée d’automates d’analyses sanguines pour faire la biochimie et le comptage des différentes cellules du sang ainsi que d’un microscope, d’un analyseur d’urines."/>
+                <link rel="canonical" href="/Labotatoire" />
             </Helmet>
             <div className={styles.menustick}>
                 <MenuListComposition/>

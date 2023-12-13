@@ -10,6 +10,7 @@ export default function Sterilisation() {
       <Helmet>
         <title>stérilisation Vet Sur Jalles</title>
         <meta name="description" content="clinique vétérinaire vet sur jalles à Saint Jean d'Illac. Cette intervention est destinée à empêcher la reproduction. Elle peut être chimique ou chirurgicale. Elle va aussi modifier certains comportements. Les interêts de la stérilisation sont nombreux : d’abord réduire le risque de reproduction ( donc pas de portées non désirée donc moins d’abandon), ensuite il n’y a plus de chaleurs : la chienne n’aura plus de pertes de sang, n’attirera plus tous les mâles du voisinage, les mâles ne partiront plus en goguette à la recherche de l’âme soeur ( donc moins de risque d’accident surtout chez les matous). C’est un excellent moyen de prévention des cancers hormono-dépendants ( tumeurs mammaires, cancers de l’ovaire, des testicules, de la prostate) ainsi que des infections des organes sexuels ( infection de l’utérus, du vagin…)."/>
+        <link rel="canonical" href="/Sterilisation" />
       </Helmet>
       <div className={styles.menustick}>
         <MenuListComposition/>

@@ -23,6 +23,7 @@ export default function Contact() {
       <Helmet>
         <title>contact vet sur jalles</title>
         <meta name="description" content="clinique vétérinaire vet sur jalles à Saint Jean d'Illac. 1521 av de Bordeaux. vetsurjalles@gmail.com. +33 05 33 09 08 00"/>
+        <link rel="canonical" href="/Contact" />
       </Helmet>
       <div className={styles.menustick}>
         <MenuListComposition/>
