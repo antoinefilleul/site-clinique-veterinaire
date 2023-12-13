@@ -2,10 +2,15 @@ import MenuListComposition from "../layout/button"
 import styles from "./medecine.module.scss"
 import logoUrl from '../assets/logo.jpg'
 import bgUrl from '../assets/image.jpg'
+import { Helmet } from "react-helmet-async"
 
 export default function Medecine() {
     return(
         <div className={styles.medecine}>
+          <Helmet>
+            <title>Medecine Vet Sur Jalles</title>
+            <meta name="description" content="clinique vétérinaire vet sur jalles à Saint Jean d'Illac. LA CONSULTATION VACCINALE: La vaccination, l’examen médical régulier et l’alimentation forment la pierre d’assise de la médecine préventive"/>
+          </Helmet>
           <div className={styles.menustick}>
             <MenuListComposition/>
           </div>

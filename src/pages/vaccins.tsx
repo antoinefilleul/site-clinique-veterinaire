@@ -2,10 +2,15 @@ import MenuListComposition from "../layout/button"
 import styles from "./vaccins.module.scss"
 import logoUrl from '../assets/logo.jpg'
 import bgUrl from '../assets/image.jpg'
+import { Helmet } from "react-helmet-async"
 
 export default function Vaccins() {
     return (
         <div className={styles.vaccin}>
+            <Helmet>
+                <title>vaccins Vet Sur Jalles</title>
+                <meta name="description" content="clinique vétérinaire vet sur jalles à Saint Jean d'Illac. La clinique vacinne chiens et chats pour :le typhus, le corza, le FLEV, la rage, La maladie de Carré, L’Hépatite de Rubarth, La Parvovirose, La Leptospirose, la Toux du Chenil, La Piroplasmose et la Maladie de Lyme, La Leishmaniose"/>
+            </Helmet>
             <div className={styles.menustick}>
                 <MenuListComposition/>
             </div>

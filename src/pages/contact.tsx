@@ -7,8 +7,8 @@ import MenuListComposition from "../layout/button";
 import styles from './contact.module.scss'
 import { LatLngExpression } from "leaflet";
 import bgUrl from '../assets/image.jpg'
-
-const createClusterCustomIcon = function (cluster: { getChildCount: () => any; }) {
+import { Helmet } from "react-helmet-async";
+const createClusterCustomIcon = function (cluster: { getChildCount: () => unknown; }) {
   return divIcon({
     html: `<span class="cluster-icon">${cluster.getChildCount()}</span>`,
     className: "custom-marker-cluster",
@@ -20,6 +20,10 @@ export default function Contact() {
   const defaultPosition: LatLngExpression = [44.8096, -0.7624];
   return (
     <div className={styles.contact}>
+      <Helmet>
+        <title>contact vet sur jalles</title>
+        <meta name="description" content="clinique vétérinaire vet sur jalles à Saint Jean d'Illac. 1521 av de Bordeaux. vetsurjalles@gmail.com. +33 05 33 09 08 00"/>
+      </Helmet>
       <div className={styles.menustick}>
         <MenuListComposition/>
       </div>

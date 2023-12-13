@@ -2,7 +2,7 @@ import styles from './accueil.module.scss'
 import MenuListComposition from '../layout/button';
 import logoUrl from '../assets/logo.jpg'
 import bgUrl from '../assets/image.jpg'
-
+import { Helmet } from 'react-helmet-async';
 export default function Accueil() {
   const tarifs = [
   {name:"consultation", id:"45€"},
@@ -23,6 +23,10 @@ export default function Accueil() {
     )
   return (
     <div className={styles.accueil}>
+      <Helmet>
+        <title>Accueil</title>
+        <meta name="description" content="Clinique vétarinaire du Docteur Dominique Filleul."/>
+      </Helmet>
       <div className={styles.menustick}>
         <MenuListComposition/>
       </div>

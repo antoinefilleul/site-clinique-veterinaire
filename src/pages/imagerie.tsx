@@ -2,10 +2,15 @@ import MenuListComposition from "../layout/button"
 import styles from "./imagerie.module.scss"
 import logoUrl from '../assets/logo.jpg'
 import bgUrl from '../assets/image.jpg'
+import { Helmet } from "react-helmet-async"
 
 export default function Imagerie() {
     return(
         <div className={styles.imagerie}>
+            <Helmet>
+                <title>Imagerie Vet Sur Jalles</title>
+                <meta name="description" content="clinique vétérinaire vet sur jalles à Saint Jean d'Illac. La clinique est capable de réaliser les sevices d'imageries suivants: radiologie numérique, échographie"/>
+            </Helmet>
             <div className={styles.menustick}>
                 <MenuListComposition/>
             </div>

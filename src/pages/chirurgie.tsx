@@ -2,10 +2,15 @@ import MenuListComposition from "../layout/button"
 import styles from './chirurgie.module.scss'
 import logoUrl from '../assets/logo.jpg'
 import bgUrl from '../assets/image.jpg'
+import { Helmet } from 'react-helmet-async';
 
 export default function Chirurgie() {
     return (
         <div className={styles.chirurgie}>
+            <Helmet>
+                <title>chirurgie vet sur jalles</title>
+                <meta name="description" content="clinique vétérinaire Saint Jean d'Illac. Chirurgie tissue mous chiens et chats:stérilisation, chirurgie cutanée, chirurgie viscérale, fractures, ligaments croisés, rotules"/>
+            </Helmet>
             <div className={styles.menustick}>
                 <MenuListComposition/>
             </div>

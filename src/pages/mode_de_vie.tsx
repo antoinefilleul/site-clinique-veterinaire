@@ -2,10 +2,15 @@ import MenuListComposition from "../layout/button"
 import styles from "./mode_de_vie.module.scss"
 import logoUrl from '../assets/logo.jpg'
 import bgUrl from '../assets/image.jpg'
+import { Helmet } from "react-helmet-async"
 
 export default function Mode_de_vie () {
     return (
         <div className={styles.mdv}>
+            <Helmet>
+                <title>Mode De Vie</title>
+                <meta name="description" content="clinique vétérinaire vet sur jalles à Saint Jean d'Illac. Le mode de vie que vous avez choisi pour votre animal a une grande importance. Cela va influencer les pathologies qu’il peut rencontrer ainsi que les plans de prévention qu’il faut mettre en place."/>
+            </Helmet>
             <div className={styles.menustick}>
                 <MenuListComposition/>
             </div>

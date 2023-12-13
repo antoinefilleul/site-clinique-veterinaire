@@ -2,10 +2,14 @@ import MenuListComposition from "../layout/button"
 import styles from "./depot.module.scss"
 import logoUrl from '../assets/logo.jpg'
 import bgUrl from '../assets/image.jpg'
-
+import { Helmet } from "react-helmet-async"
 export default function Depot() {
     return(
         <div className={styles.depot}>
+            <Helmet>
+                <title>depot minutes</title>
+                <meta name="description" content="clinique vétérinaire vet sur jalles à Saint Jean d'Illac, Comme les gens travaillent, et que de notre côté, notre planning peut être plein à l’heure où vous pouvez venir, nous avons développé ce « concept » de « drive-in »: vous nous prévenez à l’avance, vous déposez votre animal à l’accueil où nous vous ferons remplir un questionnaire de santé pour pouvoir examiner l’animal, ainsi qu’un devis approximatif"/>
+            </Helmet>
             <div className={styles.menustick}>
                 <MenuListComposition/>
             </div>
