@@ -9,7 +9,7 @@ export default function Depot() {
             <Helmet>
                 <title>depot minutes</title>
                 <meta name="description" content="clinique vétérinaire vet sur jalles à Saint Jean d'Illac, Comme les gens travaillent, et que de notre côté, notre planning peut être plein à l’heure où vous pouvez venir, nous avons développé ce « concept » de « drive-in »: vous nous prévenez à l’avance, vous déposez votre animal à l’accueil où nous vous ferons remplir un questionnaire de santé pour pouvoir examiner l’animal, ainsi qu’un devis approximatif"/>
-                <link rel="canonical" href="/Depot" />
+                <link rel="canonical" href="https://www.vetsurjalles.fr/Depot" />
             </Helmet>
             <div className={styles.menustick}>
                 <MenuListComposition/>

@@ -10,7 +10,7 @@ export default function Chirurgie() {
             <Helmet>
                 <title>chirurgie vet sur jalles</title>
                 <meta name="description" content="clinique vétérinaire Saint Jean d'Illac. Chirurgie tissue mous chiens et chats:stérilisation, chirurgie cutanée, chirurgie viscérale, fractures, ligaments croisés, rotules"/>
-                <link rel="canonical" href="/Chirurgie" />
+                <link rel="canonical" href="https://www.vetsurjalles.fr/Chirurgie" />
             </Helmet>
             <div className={styles.menustick}>
                 <MenuListComposition/>

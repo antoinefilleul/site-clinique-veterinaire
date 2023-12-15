@@ -10,7 +10,7 @@ export default function Medecine() {
           <Helmet>
             <title>Medecine Vet Sur Jalles</title>
             <meta name="description" content="clinique vétérinaire vet sur jalles à Saint Jean d'Illac. LA CONSULTATION VACCINALE: La vaccination, l’examen médical régulier et l’alimentation forment la pierre d’assise de la médecine préventive"/>
-            <link rel="canonical" href="/Medecine" />
+            <link rel="canonical" href="https://www.vetsurjalles.fr/Medecine" />
           </Helmet>
           <div className={styles.menustick}>
             <MenuListComposition/>

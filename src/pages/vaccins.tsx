@@ -10,6 +10,7 @@ export default function Vaccins() {
             <Helmet>
                 <title>vaccins Vet Sur Jalles</title>
                 <meta name="description" content="clinique vétérinaire vet sur jalles à Saint Jean d'Illac. La clinique vacinne chiens et chats pour :le typhus, le corza, le FLEV, la rage, La maladie de Carré, L’Hépatite de Rubarth, La Parvovirose, La Leptospirose, la Toux du Chenil, La Piroplasmose et la Maladie de Lyme, La Leishmaniose"/>
+                <link rel="canonical" href="https://www.vetsurjalles.fr/Vaccins" />
             </Helmet>
             <div className={styles.menustick}>
                 <MenuListComposition/>

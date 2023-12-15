@@ -10,7 +10,7 @@ export default function Consult () {
             <Helmet>
                 <title>consultation vet sur Jalles</title>
                 <meta name="description" content="Clinique vétérinaire vet sur jalles à Saint Jean d'Illac. Consultation prévenives:vaccins, rdv annuels, bilan de santé, examens compléméntaires, bilan pubertaire. Animale malade: diarrhées hémoragiques, vomissements, animale abbatu, problêmes d'alimentaions, morsures ou plaies ouvertes, démangeaisons"/>
-                <link rel="canonical" href="/Consult" />
+                <link rel="canonical" href="https://www.vetsurjalles.fr/Consult" />
             </Helmet>
             <div className={styles.menustick}>
                 <MenuListComposition/>

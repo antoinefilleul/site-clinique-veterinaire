@@ -10,7 +10,7 @@ export default function Imagerie() {
             <Helmet>
                 <title>Imagerie Vet Sur Jalles</title>
                 <meta name="description" content="clinique vétérinaire vet sur jalles à Saint Jean d'Illac. La clinique est capable de réaliser les sevices d'imageries suivants: radiologie numérique, échographie"/>
-                <link rel="canonical" href="/Imagerie" />
+                <link rel="canonical" href="https://www.vetsurjalles.fr/Imagerie" />
             </Helmet>
             <div className={styles.menustick}>
                 <MenuListComposition/>
