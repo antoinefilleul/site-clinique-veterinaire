@@ -5,12 +5,12 @@ import bgUrl from '../assets/image.jpg'
 import { Helmet } from 'react-helmet-async';
 export default function Accueil() {
   const tarifs = [
-  {name:"consultation", id:"45€"},
-  {name:"radiographie", id:"48€"},
-  {name:"castration chat", id:"79€"},
-  {name:"castration chien", id:"180€-210€"},
-  {name:"ovariectomie chatte", id:"145€"},
-  {name:"ovariectomie chienne", id:"295€-345€"}]
+  {name:"consultation", id:"46.90€"},
+  {name:"radiographie", id:"50€"},
+  {name:"castration chat", id:"82.20€"},
+  {name:"castration chien", id:"187.30€-218.50€"},
+  {name:"ovariectomie chatte", id:"150.90€"},
+  {name:"ovariectomie chienne", id:"307€-359€"}]
   const list_tarif = tarifs.map(tarif =>
     <ul key={tarif.id}>
       <li className={styles.type}>
